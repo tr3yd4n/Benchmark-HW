@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>I am the title!</title> <!-- Excercise 1 -->
+    <style>/* Excercise 11 */
+        body{ 
+            background-color: yellow;
+            max-width: 10;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1{ /* Excercise 12 */
+            align-self: center;
+        }
+
+        a{ /* Excercise 13 */
+            color: blue;
+        }
+
+        table{ /* Excercise 15*/
+            border: 1px;
+            border-radius: 8px;
+        }
+        p{ /* Excercise 16*/
+            margin-bottom: 10px;
+        }
+
+        td{ /* Excercise 20 */
+            border: 6px solid green;
+            border-top: 3px dotted red;
+            border-bottom: 3px dotted red;
+            height: 50px;
+            width: 50px;
+        } 
+
+        .class1 { /* Excercise 14 */
+            border: 100px;
+        }
+
+        .class2 { /* Excercise 17 */
+            font-size: 50px;
+            font-weight: 50px;
+        }
+
+        .class3{ /* Excercise 18 */
+            display: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header id="header"><h1>I am the heading!</h1></header> <!-- Excercise 2 -->
+    
+    <ol> <!-- Excercise 3 -->
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ol>
+    
+    <table id="table"> <!-- Excercise 4 + 5 + 6 + 7 + 8 -->
+        <tr>
+            <td></td>
+            <td><a href="https://www.google.com" target="_blank"><img src="https://www.seekpng.com/png/small/375-3750832_youtube-play-button-transparent-youtube-logo-100x100-png.png"></a></a></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="https://www.google.com" target="_blank"><img src="https://www.seekpng.com/png/small/375-3750832_youtube-play-button-transparent-youtube-logo-100x100-png.png"></a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <hr size=8>
+
+        <tr>
+            <td></td>
+            <td><a href="https://www.google.com" target="_blank"><img src="https://www.seekpng.com/png/small/375-3750832_youtube-play-button-transparent-youtube-logo-100x100-png.png"></a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="https://www.google.com" target="_blank"><img src="https://www.seekpng.com/png/small/375-3750832_youtube-play-button-transparent-youtube-logo-100x100-png.png"></a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="conainter"> <!-- Excercise 9 -->
+        <p>I am a paragraph</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+    
+    <ul id="q39"></ul>
+
+<footer>My Name is Dan and I hope I am doing well so far :)</footer> <!-- Excercise 10 -->
+    <script>
+        let x = "John"
+        let y = "Doe"
+        console.log(x + " " + y) /* Excercise 21 */
+        
+        let person = {
+            name: "Dan",
+            surname: "T",
+            email: "DanT@email.com",
+        } /* Excercise 22 */
+        
+        delete person.email; /* Excercise 23 */
+
+        console.log(person)
+        
+        let myArray = ["1","2","3","4","5","6","7","8","9","10"] /* Excercise 24 */
+        console.log(myArray) /* Excercise 25 */
+        
+        let newArray = []
+
+        function createRandomArray(){ /* Excercise 26 */
+            for (i = 0; i < 100; i++){
+                let randomNum = Math.floor(Math.random() * 100) +1
+                newArray.push(randomNum)
+            }
+        }
+        createRandomArray()
+
+        function maxAndMin(){ /* Excercise 27 */
+            console.log(Math.min(...newArray))
+            console.log(Math.max(...newArray))
+        }
+        console.log(Math.min(...newArray))
+
+        let arrayOfArrays = [] /* Excercise (28 doesn't work :/) */
+
+        function createRandomArrays(numberOfArrays){
+            let newArray = []
+            for (i = 0; i < 10; i++){
+                let randomNum = Math.floor(Math.random() * 100) +1
+                newArray.push(randomNum)
+            }
+            return newArray
+            arrayOfArrays.push(newArray)
+        }
+        createRandomArrays(10)
+
+        let myArray1 = [1, 2, 3, 4, 5]
+        let myArray2 = [1, 2, 3]
+
+        function longestArray(){ /* Excercise 29 */
+            if (myArray1 > myArray2){
+                return myArray1
+            }else{
+                if (myArray2 > myArray1){
+                return myArray2
+            }
+            }
+        }
+        
+        function returnHighestSum(){ /* Excercise 30 */
+            // get + sum first array
+            // get + sum second array
+            // compare array1 sum of to array 2 sum of
+            // return the greater of the 2
+            // if equal return they are equal
+        }
+
+        let container = document.getElementByClass("container") /* Excercise 31 */
+
+        let tDS = document.getElementsByTagName("td") /* Excercise 32 */
+
+        function printTextTD(){ /* Excercise 33 */
+            tDS = document.getElementsByTagName("td")
+            //loop
+            //create inner text
+            //add them to array
+            //end loop when x = numoftd
+        }
+
+        function changeHeading(){ /* Excercise 34 */
+            let header = document.getElementById("header")
+            header.innerText = "New Header!"
+        }
+
+        function addRow(){ /* Excercise 35 */
+            let table = document.getElementById("table")
+            table.insertRow()
+        }
+        addRow()
+
+        function addClass(){ /* Excercise 36 */
+            let tD = document.getElementsById("td")
+            td.classList.add("Text")
+        }
+
+        function changeBackground(){ /* Excercise 37 */
+            let tags = document.querySelectorAll("a")
+            tags.style.backgroundColor = "red"
+        }
+                
+        window.onload = function(){ /* Excercise 38 */
+            console.log("Page loaded")
+          
+        }
+        
+        function addItems(){ /* Excercise 39 */
+        let UL = document.getElementById("q39")
+            for (i=0; i < addItems; i++){
+                UL.createElement("li")
+            }
+        }
+
+        function emptyList(){ /* Excercise 40 */
+            //target the list we want to empty
+            //ul.innterHTML = ""
+
+        }
+                
+    </script>
+</body>
+</html>
